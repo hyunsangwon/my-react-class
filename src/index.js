@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Main from './components_0430/Main';
 import reportWebVitals from './reportWebVitals';
 
 //ReactDOM(Document Object Model)은 VirtualDOM이라고 함.
@@ -12,7 +13,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //StrictMode은 개발자가 빠른 에러를 해결할 수 있도록 검사와 경고메세지를 전달합니다.
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Main></Main>
   </React.StrictMode>,
 );
 reportWebVitals();
