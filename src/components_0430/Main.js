@@ -1,25 +1,19 @@
 import React from 'react';
-import Header from './Header';
-import Card from './Card';
-import Card2 from './Crad2';
+import Nav from './Nav/Nav';
 import './Main.css';
+import Content from './Content/Content';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 const Main = () => {
-  // conditional rendering : 조건 렌더링
-  // 1. if/else 이용
-  let isLogin = true;
-  if (isLogin) {
-    return (
-      <div className="plan">
-        <Header></Header>
-        <Card></Card>
-      </div>
-    );
-  }
   return (
-    <div className="plan">
-      <Header></Header>
-      <Card2></Card2>
+    <div className="container">
+      <Nav></Nav>
+      <div className="main">
+        <Header></Header>
+        <Content></Content>
+        <Footer></Footer>
+      </div>
     </div>
   );
 };

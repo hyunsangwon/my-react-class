@@ -1,0 +1,14 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+}
+.article {
+  width: 80vw;
+  border: 1px solid black;
+}
+.aside {
+  background: beige;
+  width: 20vw;
+  border: 1px solid black;
+}
