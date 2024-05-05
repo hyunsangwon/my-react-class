@@ -1,25 +1,12 @@
 import React from 'react';
-import Header from './Header';
-import Card from './Card';
-import Card2 from './Crad2';
+import Chef from './Chef/ChefList';
 import './Main.css';
 
 const Main = () => {
-  // conditional rendering : 조건 렌더링
-  // 1. if/else 이용
-  let isLogin = true;
-  if (isLogin) {
-    return (
-      <div className="plan">
-        <Header></Header>
-        <Card></Card>
-      </div>
-    );
-  }
   return (
-    <div className="plan">
-      <Header></Header>
-      <Card2></Card2>
+    <div className="chef">
+      <h1 className="section">오늘의 Chef</h1>
+      <Chef></Chef>
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.active-puple {
+  margin-top: 10px;
+  border: 1px solid black;
+  width: 500px;
+  height: 200px;
+  background-color: blueviolet;
+}
+.active-blue {
+  margin-top: 10px;
+  border: 1px solid black;
+  width: 500px;
+  height: 200px;
+  background-color: blue;
+}
+.active {
+  display: block;
+}
