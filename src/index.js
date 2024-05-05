@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Main from './components_0507/Main';
+import Main from './components_0509/Main';
 import reportWebVitals from './reportWebVitals';
 
 //ReactDOM(Document Object Model)은 VirtualDOM이라고 함.
