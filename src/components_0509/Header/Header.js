@@ -1,30 +1,18 @@
 import React from 'react';
 import './Header.css';
+import Nav from '../Nav/Nav';
+import logo from '../images/logo.png';
 
 const Header = () => {
+  const menu = ['HOME', 'ABOUT', 'PROGRAMS', 'FACILITIES', 'CONTACT'];
+
   return (
     <div className="header">
       <div className="nav">
-        <a href="#">{/* <img src="#" className="logo" /> */}</a>
-        <div className="nav-links">
-          <ul>
-            <li>
-              <a href="#">HOME</a>
-            </li>
-            <li>
-              <a href="#">ABOUT</a>
-            </li>
-            <li>
-              <a href="#">PROGRAMS</a>
-            </li>
-            <li>
-              <a href="#">FACILITIES</a>
-            </li>
-            <li>
-              <a href="#">CONTACT</a>
-            </li>
-          </ul>
-        </div>
+        <a href="#">
+          <img src={logo} className="logo" />
+        </a>
+        <Nav menu={menu}></Nav>
       </div>
       <div className="text-box">
         <h1>Coffee one day className</h1>
