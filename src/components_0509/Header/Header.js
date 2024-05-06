@@ -5,7 +5,6 @@ import logo from '../images/logo.png';
 
 const Header = () => {
   const menu = ['HOME', 'ABOUT', 'PROGRAMS', 'FACILITIES', 'CONTACT'];
-
   return (
     <div className="header">
       <div className="nav">
