@@ -1,1 +1,1 @@
-- condition render
+- 컴포넌트 설명 및 문제
