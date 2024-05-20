@@ -1,2 +1,3 @@
 - 컴포넌트, props 복습
 - 컴포넌트 예제
+- 문제 : https://legacy.reactjs.org/docs/thinking-in-react.html
