@@ -1,2 +1,4 @@
-- life cycle
-- 컴포넌트 최종
+- useState & life cycle
+  - Mount : 컴포넌트가 페이지에 처음 렌더링 될 때
+  - Update : 부모가 re-렌더링될 때, state가 바뀔 때, context가 바뀔 때
+  - Unmount : 컴포넌트가 페이지에서 사라질 때
