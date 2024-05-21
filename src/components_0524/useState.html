@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const [count1, count2] = [3, 6]; //순차적으로 배열에 값을 넣을 수 있다.(배열 구조 분해 할당)
+      console.log(count1);
+      console.log(count2);
+      //그 외 배열구조분해할당
+      const [a = 10, b = 20] = [1];
+      console.log(a); // 1
+      console.log(b); // 20
+      const [a2, , b2] = [1, 2, 3];
+      console.log(a2); // 1
+      console.log(b2); // 3
+      const [a3, ...rest] = [1, 2, 3, 4];
+      console.log(a3); // 1
+      console.log(rest); // [2, 3, 4]
+      function getValues() {
+        return [1, 2, 3];
+      }
+      const [a4, b4, c4] = getValues();
+      console.log(a4); // 1
+      console.log(b4); // 2
+      console.log(c4); // 3
+
+      function count3(x) {
+        //x를 받고 x를 리턴함
+        return x;
+      }
+      let count3Result = count3(5);
+      console.log('count3Result : ' + count3Result);
+
+      function useState(initValue) {
+        let x = initValue;
+        let y = function (newValue) {
+          //자바스크립트는 함수안에 함수생성이 가능하다.
+          x = newValue;
+          return x;
+        };
+        return [x, y];
+      }
+
+      //set : 세팅하다
+      //get : 호출하다
+      const [count, setCount] = useState(1);
+      console.log(count);
+      console.log(setCount); //함수출력
+      let result = setCount(count + 3);
+      console.log(count);
+      console.log(result);
+    </script>
+  </body>
+</html>
