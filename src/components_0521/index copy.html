@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        margin: 100px auto;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="productTable"></tbody>
+    </table>
+  </body>
+  <script>
+    const PRODUCTS = [
+      { category: '돼지고기', price: '$13.99', stocked: true, name: '삼겹살' },
+      { category: '돼지고기', price: '$9.99', stocked: true, name: '목살' },
+      { category: '소고기', price: '$55.99', stocked: false, name: '등심' },
+      { category: '소고기', price: '$79.99', stocked: true, name: '안심' },
+    ];
+    let html = '';
+    let lastCategory = null;
+    PRODUCTS.forEach((data) => {
+      if (lastCategory != data.category) {
+        html += `<tr>
+          <th colSpan="2">${data.category}</th>
+          </tr>`;
+      }
+      lastCategory = data.category;
+      html += `
+      <tr>
+        <td>
+          <span>${data.name}</span>
+        </td>
+        <td>${data.price}</td>
+      </tr>
+      `;
+    });
+    document.querySelector('#productTable').innerHTML = html;
+  </script>
+</html>
