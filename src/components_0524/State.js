@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 const State = () => {
   const [initVal, setVal] = useState(0);
   /*
+  2019년 혜성과 같이 등장한 useState
+  useState등장으로 React 코드 방식이 calss기반에서 함수기반으로 변경 됨
+
   여기서 initVal 현재 상태 값을 나타내며, 
   setVal 이 상태를 업데이트하는 함수. 
   useState(0)은 상태의 초기값을 0으로 설정.
