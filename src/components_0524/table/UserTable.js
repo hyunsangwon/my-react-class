@@ -2,36 +2,36 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './Table.css';
 import { Search } from './Search';
+import TableRow from './TableRow';
 
-const colums = ['uuid', 'name', 'dname', 'sal'];
-let data = [
-  {
-    uuid: uuidv4(),
-    name: 'brian',
-    dname: 'sales',
-    sal: 2500,
-  },
-  {
-    uuid: uuidv4(),
-    name: 'allen',
-    dname: 'manager',
-    sal: 3500,
-  },
-  {
-    uuid: uuidv4(),
-    name: 'smith',
-    dname: 'clerk',
-    sal: 1800,
-  },
-  {
-    uuid: uuidv4(),
-    name: 'jones',
-    dname: 'clerk',
-    sal: 1800,
-  },
-];
-
-export const Table = () => {
+const UserTable = () => {
+  const colums = ['uuid', 'name', 'dname', 'sal'];
+  let data = [
+    {
+      uuid: uuidv4(),
+      name: 'brian',
+      dname: 'sales',
+      sal: 2500,
+    },
+    {
+      uuid: uuidv4(),
+      name: 'allen',
+      dname: 'manager',
+      sal: 3500,
+    },
+    {
+      uuid: uuidv4(),
+      name: 'smith',
+      dname: 'clerk',
+      sal: 1800,
+    },
+    {
+      uuid: uuidv4(),
+      name: 'jones',
+      dname: 'clerk',
+      sal: 1800,
+    },
+  ];
   const [emp, setEmp] = useState(data);
 
   const init = () => {
@@ -53,7 +53,7 @@ export const Table = () => {
         }),
       );
     }
-  }; //사원 검색
+  };
 
   return (
     <div>
@@ -67,23 +67,10 @@ export const Table = () => {
             ))}
           </tr>
         </thead>
-        <tbody>
-          {emp.length > 0 ? (
-            emp.map((d) => (
-              <tr key={d.uuid}>
-                <td>{d.uuid}</td>
-                <td>{d.name}</td>
-                <td>{d.dname}</td>
-                <td>{d.sal}</td>
-              </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan={4}>No data</td>
-            </tr>
-          )}
-        </tbody>
+        <TableRow emp={emp} />
       </table>
     </div>
   );
 };
+
+export default UserTable;
