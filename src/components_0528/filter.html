@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let data = [
+      {
+        uuid: 3000,
+        name: 'brian',
+        dname: 'sales',
+        loc: 'BOSTON',
+        sal: 2500,
+      },
+      {
+        uuid: 4000,
+        name: 'allen',
+        dname: 'clerk',
+        loc: 'BOSTON',
+        sal: 3500,
+      },
+      {
+        uuid: 5000,
+        name: 'smith',
+        dname: 'clerk',
+        loc: 'BOSTON',
+        sal: 1800,
+      },
+      {
+        uuid: 6000,
+        name: 'jones',
+        dname: 'clerk',
+        loc: 'LA',
+        sal: 1800,
+      },
+    ];
+    //부서이름이 clerk인 유저 조회하기
+    let value = 'clerk';
+    let emp = data.filter((e) => {
+      return e.dname.includes(value);
+    });
+    console.log(emp);
+    //부서이름을 대문자로 입력했을 때 소문자로 변환하기
+    //toLowerCase() 대문자 -> 소문자
+    let value2 = 'CLERK';
+    let emp2 = data.filter((e) => {
+      return e.dname.includes(value2.toLowerCase());
+    });
+    console.log(emp2);
+    //부서위치는 대문자로 되어있는데, 소문자로 입력해도 검색할 수 있게
+    let value3 = 'la';
+    let emp3 = data.filter((e) => {
+      return e.loc.toLowerCase().includes(value3);
+    });
+    console.log(emp3);
+    //급여가 2000이하인 사원 조회
+    let value4 = 2000;
+    let emp4 = data.filter((e) => {
+      return e.sal <= value4;
+    });
+    console.log(emp4);
+    //사원번호를 이용해 특정 사원정보 조회
+    let value5 = 5000;
+    let emp5 = data.filter((e) => {
+      return e.uuid === value5;
+    });
+    console.log(emp5);
+    //5000번 사원을 제외한 모든 사원정보 조회
+    let value6 = 5000;
+    let emp6 = data.filter((e) => {
+      return e.uuid !== value6;
+    });
+    console.log(emp6);
+    //근무지가 boston이고 부서이름이 clerk인 사원 조회
+    let value7 = 'boston';
+    let value8 = 'clerk';
+    let emp7 = data.filter((e) => {
+      return e.loc.toLowerCase().includes(value7) && e.dname.toLowerCase().includes(value8);
+    });
+    console.log(emp7);
+  </script>
+</html>
