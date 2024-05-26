@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
 import App from './App.js';
 //ReactDOM(Document Object Model)은 VirtualDOM이라고 함.
 //기존 페이지는 변경된 데이터가 있을 때 화면 전체를 랜더링 함.
@@ -14,4 +12,3 @@ root.render(
     <App></App>
   </React.StrictMode>,
 );
-reportWebVitals();
