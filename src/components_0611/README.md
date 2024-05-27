@@ -1,0 +1,3 @@
+- npm i msw
+- https://mswjs.io/docs/migrations/1.x-to-2.x/
+- msw는 백엔드 연동없이 가상 API를 연동해 테스트해볼 수 있다.
