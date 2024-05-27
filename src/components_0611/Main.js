@@ -7,7 +7,12 @@ const Main = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('/todos')
+    fetch('http://localhost:3000/todos', {
+      headers: {
+        Accept: 'application / json',
+      },
+      method: 'GET',
+    })
       .then((res) => res.json())
       .then((data) => {
         setTodos(data);
@@ -18,6 +23,7 @@ const Main = () => {
   return (
     <div>
       <h2>할일 목록</h2>
+
       <ul>
         {todos.map((todo, idx) => (
           <li key={idx}>{todo}</li>
