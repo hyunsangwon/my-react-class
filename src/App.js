@@ -1,6 +1,6 @@
 //import { TodoWrapper } from './components_0604/todo/TodoWrapper';
 // import { SimpleTodo } from './components_0530/simple_todo/SimpleTodo';
-import Main from './components_0611/Main';
+import Main from './components_0613/Main';
 
 function App() {
   return (

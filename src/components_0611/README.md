@@ -1,4 +1,5 @@
 - npm i msw
+- npx msw init public/ --save
 - npm i axios
 - https://mswjs.io/docs/migrations/1.x-to-2.x/
 
