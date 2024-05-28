@@ -1,4 +1,8 @@
 - npm i msw
 - npm i axios
 - https://mswjs.io/docs/migrations/1.x-to-2.x/
-- msw는 백엔드 연동없이 가상 API를 연동해 테스트해볼 수 있다.
+
+### 수업
+
+1. http
+2. rest api -> get, post, patch, delete
