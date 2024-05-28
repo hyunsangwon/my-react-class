@@ -1,6 +1,6 @@
 //import { TodoWrapper } from './components_0604/todo/TodoWrapper';
 // import { SimpleTodo } from './components_0530/simple_todo/SimpleTodo';
-import Main from './components_0613/Main';
+import Event from './components_0528/Event';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       {/* <UserTable></UserTable> */}
       {/* <TodoWrapper></TodoWrapper> */}
       {/* <SimpleTodo></SimpleTodo> */}
-      <Main></Main>
+      <Event></Event>
     </div>
   );
 }

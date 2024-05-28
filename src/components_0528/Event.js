@@ -22,6 +22,8 @@ const Event = () => {
     userPhone: '',
     userAddr: '',
   });
+  const [data, setData] = useState([]);
+
   const inputOnChange = (e) => {
     const { value, name } = e.target;
     console.log('value : ' + value);
@@ -32,8 +34,10 @@ const Event = () => {
       [name]: value,
     });
   };
+
   const createUser = () => {
-    console.log(inputs);
+    //초기화 진행 해야함
+    setData([...data, inputs]);
   };
   return (
     <div style={{ border: '1px solid black' }}>
@@ -53,6 +57,14 @@ const Event = () => {
         <button type="button" onClick={() => buttonPrint()}>
           Click
         </button>
+      </div>
+      <div>
+        <h3>list</h3>
+        <ul>
+          {data.map((data, index) => (
+            <li key={index}>{data.userName}</li>
+          ))}
+        </ul>
       </div>
       <div style={{ border: '1px solid red', marginTop: '20px', padding: '2%' }}>
         <input type="text" name="userName" onChange={inputOnChange} placeholder="이름을 작성하세요..." />
