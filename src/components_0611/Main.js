@@ -1,32 +1,29 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Main = () => {
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const fetchPosts = async () => {
+    const res = await axios({
+      method: 'get',
+      url: 'http://localhost:3000/todos',
+    });
+    setTodos(res.data);
+  };
+
   useEffect(() => {
-    setLoading(true);
-    fetch('http://localhost:3000/todos', {
-      headers: {
-        Accept: 'application / json',
-      },
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setTodos(data);
-        setLoading(false);
-      });
+    fetchPosts();
   }, []);
 
   return (
     <div>
       <h2>할일 목록</h2>
-
       <ul>
-        {todos.map((todo, idx) => (
-          <li key={idx}>{todo}</li>
+        {todos.map((i, index) => (
+          <li key={index}>{i.todo}</li>
         ))}
       </ul>
       <form>
