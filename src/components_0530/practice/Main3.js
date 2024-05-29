@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import './Main.css';
+
 const Main = () => {
   /*
     useState 사용법
     onChange, onClick
   */
-  const [isBlock, setBlock] = useState(false);
+  const [initArray, setArray] = useState([]);
   const [inputs, setInputs] = useState({
     userName: '',
     userPhone: '',
@@ -22,7 +24,7 @@ const Main = () => {
   };
 
   const handleButton = () => {
-    setBlock(true);
+    setArray([...initArray, inputs]);
   };
 
   return (
@@ -47,19 +49,11 @@ const Main = () => {
             <label>비고</label>
           </div>
           <input className="login-btn" type="butten" value={'작성완료'} readOnly onClick={handleButton} />
-          {isBlock === true ? (
-            <div className="signup-link" style={{ border: '1px solid black' }}>
-              <p>아래 state 결과</p>
-              <p> name : {inputs.userName}</p>
-              <p> phone : {inputs.userPhone}</p>
-              <p> addr : {inputs.userAddr}</p>
-              <p> remarks : {inputs.remarks}</p>
-            </div>
-          ) : (
-            <div className="signup-link" style={{ border: '1px solid black' }}>
-              <p>버튼을 클릭하고 내용을 확인하세요.</p>
-            </div>
-          )}
+          <div className="signup-link" style={{ border: '1px solid black' }}>
+            {initArray.map((data) => (
+              <p>{data.userName}</p>
+            ))}
+          </div>
         </div>
       </div>
     </>
