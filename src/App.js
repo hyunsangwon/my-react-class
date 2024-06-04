@@ -1,4 +1,4 @@
-import Main from './components_0604/Practice/Toggle';
+import Main from './components_0607/Main';
 
 function App() {
   return (

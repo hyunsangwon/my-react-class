@@ -6,6 +6,13 @@ const Main = () => {
   const [todo, setTodo] = useState('');
   const [loading, setLoading] = useState(false);
 
+  /*
+  async : 비동기 통신, 쓰레드를 최소화 하고 자원을 최대한 효율적으로 사용하기 위해 비동기 프로그래밍을 한다.
+  ex)네트워크와 통신할 때 주로 사용(백엔드 서버와 데이터를 주고 받을 때)
+
+  await : 비동기 작업이 완료될 때 까지 기다림.
+  
+  */
   const fetchPosts = async () => {
     const res = await axios({
       method: 'get',
