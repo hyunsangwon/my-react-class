@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.js';
-import Navbar from './components_0607/Navbar/Navbar.js';
+import Menu1 from './components_0607/Navbar/Menu1.js';
+import Menu2 from './components_0607/Navbar/Menu2.js';
+import Menu3 from './components_0607/Navbar/Menu3.js';
 import ErrorPage from './ErrorPage.js';
-
 // import { worker } from './components_0613/mocks/worker.js';
 // worker.start();
 //ReactDOM(Document Object Model)은 VirtualDOM이라고 함.
@@ -19,8 +20,16 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: '/nav',
-    element: <Navbar />,
+    path: '/menu1',
+    element: <Menu1 />,
+  },
+  {
+    path: '/menu2',
+    element: <Menu2 />,
+  },
+  {
+    path: '/menu3',
+    element: <Menu3 />,
   },
 ]);
 

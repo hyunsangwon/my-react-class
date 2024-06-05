@@ -1,4 +1,4 @@
-import Main from './components_0607/Main';
+import Main from './components_0607/Search/Search';
 
 function App() {
   return (

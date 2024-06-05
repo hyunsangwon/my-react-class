@@ -1,3 +1,4 @@
 - useEffect
 - light, dark mode
 - npm install react-router-dom@latest
+- npm install react-icons
