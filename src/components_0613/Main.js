@@ -1,58 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import './Main.css';
 
 const Main = () => {
-  const [movies, setMovies] = useState([]);
-  const [inputs, setInputs] = useState({
-    Title: '',
-    Year: '',
-    Type: '',
-  });
-  const fetchMovies = async () => {
-    const res = await axios({
-      method: 'get',
-      url: 'http://localhost:3000/movies',
-    });
-    setMovies(res.data);
-  };
-
-  useEffect(() => {
-    fetchMovies();
-  }, []);
-
-  const inputOnChange = (e) => {
-    const { value, name } = e.target;
-    setInputs({
-      ...inputs,
-      [name]: value,
-    });
-  };
-  const create = () => {
-    console.log(inputs);
-    setInputs({
-      Title: '',
-      Year: '',
-      Type: '',
-    });
-  };
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
-      <h3>movie</h3>
-      <ul>
-        {movies.map((movie, index) => (
-          <li key={index}>{movie.Title}</li>
-        ))}
-      </ul>
-      <div>
-        <input type="text" name="Title" onChange={inputOnChange} placeholder="Title..." />
-        <input type="text" name="Year" onChange={inputOnChange} placeholder="Year..." />
-        <input type="text" name="Type" onChange={inputOnChange} placeholder="Type..." />
-        <div>
-          <button type="button" onClick={() => create()}>
-            CREATE
-          </button>
-        </div>
-      </div>
+    <div className="container">
+      <motion.div
+        layout
+        transition={{ layout: { duration: 1, type: 'spring' } }}
+        className="card"
+        onClick={() => setIsOpen(!isOpen)}
+        style={{ boxShadow: '0px 10px 30px rgba(0,0,0,0.5)' }}
+      >
+        <motion.h2 layout="position">framer motion</motion.h2>
+        {isOpen && (
+          <motion.div className="expand">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique commodi voluptatibus atque quisquam accusantium perspiciatis, sed error aut accusamus, impedit at
+              autem illo? Minus pariatur nulla amet, consequatur odit rem?
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, odit.</p>
+            <button>Hello</button>
+          </motion.div>
+        )}
+      </motion.div>
     </div>
   );
 };

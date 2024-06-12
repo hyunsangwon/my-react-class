@@ -1,4 +1,4 @@
-import Main from './components_0607/Search/Search';
+import Main from './components_0613/BasicsOfMotion';
 
 function App() {
   return (

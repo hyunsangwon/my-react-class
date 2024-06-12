@@ -1,1 +1,1 @@
-- get, post, delete, patch 구현해보기
+- npm i framer-motion
