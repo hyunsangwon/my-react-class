@@ -41,4 +41,10 @@ export const handlers = [
   http.get('/todos', () => {
     return HttpResponse.json(todos);
   }),
+
+  http.get('/todos/:id', (req) => {
+    const { id } = req.params;
+    console.log('id => ' + id);
+    return HttpResponse.json(todos);
+  }),
 ];

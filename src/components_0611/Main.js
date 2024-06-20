@@ -14,6 +14,17 @@ const Main = () => {
   
   */
   const fetchPosts = async () => {
+    const obj = { id: '123' };
+    const res = await axios(
+      {
+        method: 'get',
+        url: 'http://localhost:3000/todos',
+      },
+      { obj },
+    );
+  };
+
+  const fetchPosts2 = async () => {
     const res = await axios({
       method: 'get',
       url: 'http://localhost:3000/todos',
@@ -30,6 +41,7 @@ const Main = () => {
   */
   useEffect(() => {
     fetchPosts(); // 여기서 데이터를 가져올 수 있다.
+    fetchPosts2();
   }, []); //빈 배열을 두 번째 인자로 전달하면, 이 효과는 컴포넌트가 마운트(처음 시작)될 때 한 번만 실행.
 
   return (
