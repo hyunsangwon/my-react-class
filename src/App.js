@@ -1,4 +1,4 @@
-import Main from './components_0613/Slider/Slider';
+import Main from './components_0611/Main';
 
 function App() {
   return (

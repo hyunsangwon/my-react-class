@@ -19,6 +19,7 @@ const Main = () => {
       url: 'http://localhost:3000/todos',
     });
     setTodos(res.data);
+    console.log(res.data);
   };
 
   /*

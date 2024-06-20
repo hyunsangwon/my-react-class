@@ -6,8 +6,8 @@ import Menu1 from './components_0607/Navbar/Menu1.js';
 import Menu2 from './components_0607/Navbar/Menu2.js';
 import Menu3 from './components_0607/Navbar/Menu3.js';
 import ErrorPage from './ErrorPage.js';
-// import { worker } from './components_0613/mocks/worker.js';
-// worker.start();
+import { worker } from './components_0611/mocks/worker.js';
+worker.start();
 //ReactDOM(Document Object Model)은 VirtualDOM이라고 함.
 //기존 페이지는 변경된 데이터가 있을 때 화면 전체를 랜더링 함.
 //렌더링이란 -> 브라우저에 우리가 만든 html,css,js를 보여주는 작업을 의미
