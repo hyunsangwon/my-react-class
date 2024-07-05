@@ -1,4 +1,4 @@
-import Main from './components_0621/Main';
+import Main from './components_0705/UseEffect';
 
 function App() {
   return (
