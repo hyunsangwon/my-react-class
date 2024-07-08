@@ -1,4 +1,5 @@
-import Main from './components_0705/UseEffect';
+import Main from './components_0711/Navbar/Navbar';
+import './App.css';
 
 function App() {
   return (

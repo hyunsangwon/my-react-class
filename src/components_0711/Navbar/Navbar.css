@@ -1,0 +1,25 @@
+.search-box {
+  display: flex;
+  border-radius: 40px;
+  background-color: #e4effa;
+  align-items: center;
+  width: 60vw;
+}
+
+.search-box img {
+  width: 1.3vw;
+  align-items: center;
+  margin-left: 15px;
+}
+.search-box input {
+  height: 3vw;
+  width: 55vw;
+  background-color: #e4effe;
+  border: none;
+  margin-left: 10px;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+}
