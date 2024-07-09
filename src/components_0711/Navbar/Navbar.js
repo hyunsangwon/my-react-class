@@ -5,11 +5,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import gmail from '../assets/Gmail_icon.png';
 import { Avatar, Grid } from '@mui/material';
-import lens from '../assets/kisspng-computer-icons.jpg';
 import './Navbar.css';
 import { auth } from '../firebase/setup';
+import lens from '../assets/lens.png';
+import gmail from '../assets/gmail.png';
 
 const Navbar = () => {
   return (

@@ -1,4 +1,4 @@
-import Main from './components_0711/Navbar/Navbar';
+import Main from './components_0711/Main';
 import './App.css';
 
 function App() {
